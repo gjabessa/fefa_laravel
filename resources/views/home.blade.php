@@ -15,18 +15,18 @@
                     @endif
 
                     You are logged in!
-                    <h6>Index page contents</h6>
                     <div>
                     <form enctype="multipart/form-data" action="/addindex" method="post">
-                        <b>Title</b>: <br>
+                        <b>Title</b>
                         <input type="text" required="true" name="title" placeholder="Title">
-                        <input type="text" required="true" name="image" placeholder="Image">
-                        <input type="text" required="true" name="link_to" placeholder="Link">
-                        <textarea type="text" required="true" name="description" placeholder="Desc">
+                        <br><br><b>Image</b>
+                        <input type="file" required="true" name="image" placeholder="Image">
+                        <br><br><b>Description</b>: <br>
+                        <textarea style="width:80%;height:100px" type="text" required="true" name="description" placeholder="Desc">
                         </textarea>
                         
                         {{ csrf_field() }}
-                        <button type="submit" class="btn btn-success">Submit</button>
+                        <br><br> <button type="submit" class="btn btn-success" style="position:relative;left:70%">Submit</button>
                     </form>
                     </div>
                 </div>

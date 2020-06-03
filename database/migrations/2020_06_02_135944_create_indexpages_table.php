@@ -18,7 +18,7 @@ class CreateIndexpagesTable extends Migration
             $table->string('image');
             $table->string('title')->unique();
             $table->string('description');
-            $table->string('link_to');
+            $table->string('posted_by');
             $table->timestamps();
         });
     }

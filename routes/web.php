@@ -23,4 +23,6 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::get('/resources','HomeController@resources')->name('resources');
+
 Route::post('/addindex','HomeController@create');

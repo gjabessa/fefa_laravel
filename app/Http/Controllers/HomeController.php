@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\indexpage;
+use Auth;
 
 class HomeController extends Controller
 {
@@ -28,6 +29,16 @@ class HomeController extends Controller
     }
 
 
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function resources()
+    {
+        return view('resources');
+    }
+
      /**
      * Show the form for creating a new resource.
      *
@@ -40,7 +51,7 @@ class HomeController extends Controller
         $message -> title = $request -> title;
         $message -> description = $request -> description;
         $message -> image = $request -> image;
-        $message -> link_to = $request -> link_to;
+        $message -> posted_by = Auth::user()->name ;
         $message -> save();
         
     }
