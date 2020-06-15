@@ -25,7 +25,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $messages = indexpage::paginate(5);
+        return view('home', [
+            'news'=>$messages
+        ]);
     }
 
 
@@ -53,6 +56,22 @@ class HomeController extends Controller
         $message -> image = $request -> image;
         $message -> posted_by = Auth::user()->name ;
         $message -> save();
-        
+        return redirect('/home');
+    }
+
+    public function edit($id){
+        $news = indexpage::find($id);
+        return view('edit',
+        [
+            'news'=>$news
+            ]);
+    }
+  
+    public function delete($id)
+    {
+        $news = indexpage::find($id);
+        $news->delete();
+
+        return redirect('/home');
     }
 }
