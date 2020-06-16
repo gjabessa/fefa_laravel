@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\indexpage;
 use Auth;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\File; 
 
 class HomeController extends Controller
 {
@@ -49,13 +51,15 @@ class HomeController extends Controller
      */
     public function create(Request $request)
     {
-        //
+        $path = $request->file('image')->store('images');
+
         $message = new indexpage();
         $message -> title = $request -> title;
         $message -> description = $request -> description;
-        $message -> image = $request -> image;
+        $message -> image = $path;
         $message -> posted_by = Auth::user()->name ;
         $message -> save();
+        
         return redirect('/home');
     }
 
@@ -67,9 +71,28 @@ class HomeController extends Controller
             ]);
     }
   
+    public function update($id, Request $request)
+    {
+        
+        
+        $message = indexpage::find($id);
+        $message -> title = $request -> title;
+        $message -> description = $request -> description;
+        if($request -> hasFile('image')){
+            $path = $request->file('image')->store('images');
+            $message -> image = $path;
+        }
+        
+        $message -> posted_by = Auth::user()->name ;
+        $message -> save();
+        return redirect('/home');
+    }
+
     public function delete($id)
     {
         $news = indexpage::find($id);
+        $filename = $news -> image;
+        File::delete('storage/'.$filename);
         $news->delete();
 
         return redirect('/home');
