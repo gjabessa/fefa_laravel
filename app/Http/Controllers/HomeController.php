@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\indexpage;
 use App\resources;
+use App\consultants;
 use Auth;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\File; 
@@ -47,6 +48,13 @@ class HomeController extends Controller
         ]);
     }
 
+    public function consultantIndex()
+    {
+        $messages = consultants::paginate(5);
+        return view('consultant', [
+            'res'=>$messages
+        ]);
+    }
     /**
      * Show the application dashboard.
      *
@@ -88,6 +96,22 @@ class HomeController extends Controller
         $message -> save();
         
         return redirect('/resources');
+    }
+
+    public function createConsultant(Request $request)
+    {
+
+        $message = new consultants();
+        $message -> name = $request -> name;
+        $message -> country = $request -> country;
+        $message -> phone_no = $request -> phone;
+        $message -> fax = $request -> fax;
+        $message -> email = $request -> email;
+        $message -> address = $request -> address;
+        $message -> posted_by = Auth::user()->name ;
+        $message -> save();
+        
+        return redirect('/consultants');
     }
 
     public function edit($id){
@@ -133,5 +157,13 @@ class HomeController extends Controller
         $res->delete();
 
         return redirect('/resources');
+    }
+
+    public function deleteCons($id)
+    {
+        $res = consultants::find($id);
+        $res->delete();
+
+        return redirect('/consultants');
     }
 }
