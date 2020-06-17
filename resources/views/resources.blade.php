@@ -16,7 +16,7 @@
 
                     You are logged in!
                     <div>
-                    <form enctype="multipart/form-data" action="/addindex" method="post">
+                    <form enctype="multipart/form-data" action="/addResource" method="post">
                         <b>Description</b> <br>
                         <input type="text" required="true" name="title" placeholder="Title" style="min-width:250px">
                         <br><br>
@@ -34,6 +34,20 @@
                         <br> <button type="submit" class="btn btn-success" >Submit</button>
                     </form>
                     </div>
+                    <br>
+                    @foreach($res as $message)
+                    <div style="list-style-type:none;margin-bottom:5px;">
+                        <li><b>{{$message->title}}</b></li>
+                        <div style="padding:5px;">
+                        <li>{{$message->category}}</li>
+                        <li style="color:silver">{{$message->posted_by}}</li>
+                        <li><a href="storage/{{$message ->file}}">File</a></li>
+                        <br>
+                         <a class="btn btn-small btn-danger" href="{{ URL::to('resource/' . $message->id . '/delete') }}">Delete</a>
+                        </div>
+                    </div>
+                    @endforeach
+                    {{$res->render()}}
                 </div>
             </div>
         </div>

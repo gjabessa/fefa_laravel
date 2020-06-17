@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\indexpage;
+use App\resources;
 use Auth;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\File; 
@@ -33,6 +34,18 @@ class HomeController extends Controller
         ]);
     }
 
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function resourceIndex()
+    {
+        $messages = resources::paginate(5);
+        return view('resources', [
+            'res'=>$messages
+        ]);
+    }
 
     /**
      * Show the application dashboard.
@@ -61,6 +74,20 @@ class HomeController extends Controller
         $message -> save();
         
         return redirect('/home');
+    }
+
+    public function createResource(Request $request)
+    {
+        $path = $request->file('file')->store('resources');
+
+        $message = new resources();
+        $message -> title = $request -> title;
+        $message -> category = $request -> category;
+        $message -> file = $path;
+        $message -> posted_by = Auth::user()->name ;
+        $message -> save();
+        
+        return redirect('/resources');
     }
 
     public function edit($id){
@@ -96,5 +123,15 @@ class HomeController extends Controller
         $news->delete();
 
         return redirect('/home');
+    }
+
+    public function deleteRes($id)
+    {
+        $res = resources::find($id);
+        $filename = $res -> file;
+        File::delete('storage/'.$filename);
+        $res->delete();
+
+        return redirect('/resources');
     }
 }

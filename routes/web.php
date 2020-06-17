@@ -24,15 +24,19 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/resources','HomeController@resources')->name('resources');
+Route::get('/resources','HomeController@resourceIndex')->name('resources');
 
 Route::post('/addindex','HomeController@create');
+
+Route::post('/addResource','HomeController@createResource');
 
 Route::post('/updateindex/{id}','HomeController@update');
 
 Route::get('/post/{id}/edit','HomeController@edit');
 
 Route::get('/post/{id}/delete','HomeController@delete');
+
+Route::get('/resource/{id}/delete','HomeController@deleteRes');
 
 Route::get('/foo', function () {
     Artisan::call('storage:link');
