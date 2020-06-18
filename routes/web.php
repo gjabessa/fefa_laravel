@@ -36,7 +36,11 @@ Route::post('/addConsultant','HomeController@createConsultant');
 
 Route::post('/updateindex/{id}','HomeController@update');
 
+Route::post('/updateConsultant/{id}','HomeController@updateConsultant');
+
 Route::get('/post/{id}/edit','HomeController@edit');
+
+Route::get('/consultant/{id}/edit','HomeController@editConsultant');
 
 Route::get('/post/{id}/delete','HomeController@delete');
 

@@ -52,10 +52,11 @@
                         <li>{{$message->address}}</li>
 
                         <li>{{$message->email}}</li>
-                        <li>{{$message->phone_no}}</li>
+                        <li>{{$message->phone_nophp}}</li>
                         <li>{{$message->fax}}</li>
                         <li>{{$message->country}}</li>
                         <br>
+                        <a class="btn btn-small btn-info" href="{{ URL::to('consultant/' . $message->id . '/edit') }}">Edit</a>
                          <a class="btn btn-small btn-danger" href="{{ URL::to('consultant/' . $message->id . '/delete') }}">Delete</a>
                         </div>
                     </div>

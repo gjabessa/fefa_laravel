@@ -122,6 +122,14 @@ class HomeController extends Controller
             ]);
     }
   
+    public function editConsultant($id){
+        $message = consultants::find($id);
+        return view('editcons',
+        [
+            'message'=>$message
+            ]);
+    }
+
     public function update($id, Request $request)
     {
         
@@ -137,6 +145,22 @@ class HomeController extends Controller
         $message -> posted_by = Auth::user()->name ;
         $message -> save();
         return redirect('/home');
+    }
+
+    public function updateConsultant($id, Request $request)
+    {
+        
+        
+        $message = consultants::find($id);
+        $message -> name = $request -> name;
+        $message -> country = $request -> country;
+        $message -> phone_no = $request -> phone;
+        $message -> fax = $request -> fax;
+        $message -> email = $request -> email;
+        $message -> address = $request -> address;
+        $message -> posted_by = Auth::user()->name ;
+        $message -> save();
+        return redirect('/consultants');
     }
 
     public function delete($id)
