@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Dashboard</div>
+                <div class="card-header">Resources</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -14,7 +14,6 @@
                         </div>
                     @endif
 
-                    You are logged in!
                     <div>
                     <form enctype="multipart/form-data" action="/addResource" method="post">
                         <b>Description</b> <br>
@@ -31,7 +30,7 @@
                         </select>
                         <br>
                         {{ csrf_field() }}
-                        <br> <button type="submit" class="btn btn-success" >Submit</button>
+                        <br> <button type="submit" class="btn btn-success" >Add</button>
                     </form>
                     </div>
                     <br>

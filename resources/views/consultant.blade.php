@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Dashboard</div>
+                <div class="card-header">Consultants</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -14,7 +14,6 @@
                         </div>
                     @endif
 
-                    You are logged in!
                     <div>
                     <form enctype="multipart/form-data" action="/addConsultant" method="post" class="consultants_form">
                         <b>Name</b> 
