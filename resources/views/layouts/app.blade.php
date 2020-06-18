@@ -51,13 +51,13 @@
                         @else
                             <ul class="nav">
                                 <li class="nav-item">
-                                    <a href="/home" class="nav-link active">News</a>
+                                    <a href="/home" class="nav-link" id="news">News &nbsp;</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="/consultants" class="nav-link">Consultants</a>
+                                    <a href="/consultants" class="nav-link consultants">Consultants &nbsp; </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="/resources" class="nav-link">Resources</a>
+                                    <a href="/resources" class="nav-link resources">Resources &nbsp; </a>
                                 </li>
                             </ul>
                             <li class="nav-item dropdown">
