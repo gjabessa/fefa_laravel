@@ -12,17 +12,17 @@
 */
 use App\indexpage;
 
-Route::get('/','HomeController@latestNews')->name('home');
+Route::get('/','IndexPages@latestNews')->name('home');
 
-Route::get('/news','HomeController@news')->name('News');
+Route::get('/news','IndexPages@news')->name('News');
 
 Route::get('/new', function () {
     return view('company/news');
 });
 
-Route::get('/newsdetail/{id}','HomeController@newsdetail');
+Route::get('/newsdetail/{id}','IndexPages@newsdetail');
 
-Route::get('/resource_list/{category}','HomeController@resourcelist');
+Route::get('/resource_list/{category}','IndexPages@resourcelist');
 
 Auth::routes();
 

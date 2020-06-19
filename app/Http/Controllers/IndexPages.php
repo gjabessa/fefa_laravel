@@ -2,10 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\indexpage;
+use App\resources;
+
 use Illuminate\Http\Request;
 
 
-class indexPage extends Controller
+class indexPages extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,6 +20,38 @@ class indexPage extends Controller
         //
     }
 
+    public function latestNews()
+    {
+        $messages = indexpage::limit(3)->get();
+        return view('index', [
+            'news'=>$messages
+        ]);
+    }
+
+    public function news()
+    {
+        $messages = indexpage::paginate(5);
+        return view('company/news', [
+            'news'=>$messages
+        ]);
+    }
+
+    public function resourcelist($category)
+    {
+        $messages = resources::where('category', $category)->paginate(10);
+        return view('resource_list', [
+            'res'=>$messages
+        ]);
+    }
+
+    public function newsdetail($id)
+    {
+        $message = indexpage::find($id);
+        return view('company/singlepost', [
+            'news'=>$message
+        ]);
+    }
+    
     /**
      * Show the form for creating a new resource.
      *
