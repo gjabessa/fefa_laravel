@@ -65,11 +65,12 @@
 					<div class="content-right">
 						<h2 class="title1">Direct Links</h2>
 						<ul>
-							<li><a href="#">Some link here </a></li>
-							<li><a href="#">Some long link here </a></li>
-							<li><a href="#">Some link here </a></li>
-							<li><a href="#">Some longer link here </a></li>
-							<li><a href="#">Some link here </a></li>
+							<li><a href="ups/ups.html"> UPS </a></li>
+							<li><a href="/datacenter/datacenter.html"> Data Centers </a></li>
+							<li><a href="/solar/solar.html"> Solar Panels </a></li>
+							<li><a href="expertise.html"> Our Expertise</a></li>
+							<li><a href="consultancy.html"> Consultancy </a></li>
+							<li><a href="contact.html">Contact </a></li>
 						</ul>
 					</div>
 					<div class="content-right">
@@ -220,7 +221,7 @@
 			<div class="section">
 				<h4>SEND US A MESSAGE</h4>
 				<p>
-					If you're having problems editing this website template, then don't hesitate to ask for help on the Forums.
+					If you have requests or to keep in touch with us, don't hesitate to send us a message.
 				</p>
 				<a href="#" class="subscribe">Click to send us an email</a>
 			</div>
