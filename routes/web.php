@@ -22,9 +22,7 @@ Route::get('/new', function () {
 
 Route::get('/newsdetail/{id}','HomeController@newsdetail');
 
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/resource_list/{category}','HomeController@resourcelist');
 
 Auth::routes();
 

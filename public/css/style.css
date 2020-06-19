@@ -1024,6 +1024,42 @@ ul li{
 	float: left;
 	margin-right: 20px;
 }
+.paginator ul{
+	display: flex;
+    padding-left: 0;
+    list-style: none;
+    border-radius: .25rem;
+}
+.paginator li{
+	display: list-item;
+    text-align: -webkit-match-parent;
+}
+.page-link:not(:disabled):not(.disabled) {
+    cursor: pointer;
+}
+
+.page-item.active .page-link {
+    z-index: 1;
+    color: #fff;
+    background-color: #3490dc;
+    border-color: #3490dc;
+}
+.page-link {
+    position: relative;
+    display: block;
+    padding: .5rem .75rem;
+    margin-left: -1px;
+    line-height: 1.25;
+    color: #3490dc;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+}
+a {
+    color: #3490dc;
+    text-decoration: none;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+}
 .news > li p.info, .details p.info {
 	font-size: 11px;
 	margin: 0;

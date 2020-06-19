@@ -7,6 +7,8 @@
 	<link rel="stylesheet" href="../css/style.css" type="text/css">
 	<link rel="icon" href="../images/logof22.png">
 	<script src="../js/script.js"></script>
+
+	<link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
 	<div id="header">
@@ -82,7 +84,9 @@
 							@endforeach
                     
 							</ul>
+							<div class="paginator">
 							{{$news->render()}}
+							</div>
 					</div>
 					<div>
 						<div class="right-custom-card">

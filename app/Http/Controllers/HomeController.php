@@ -64,6 +64,14 @@ class HomeController extends Controller
         ]);
     }
 
+    public function resourcelist($category)
+    {
+        $messages = resources::where('category', $category)->paginate(10);
+        return view('resource_list', [
+            'res'=>$messages
+        ]);
+    }
+
     public function newsdetail($id)
     {
         $message = indexpage::find($id);
