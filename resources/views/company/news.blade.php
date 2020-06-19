@@ -146,10 +146,10 @@
 	<div id="footer">
 		<div class="clearfix">
 			<div class="section">
-				<h4>Latest News</h4>
+				<!-- <h4>Latest News</h4>
 				<p>
 					This website template has been designed by Free Website Templates for you, for free. You can replace all this text with your own text. You can remove any link.
-				</p>
+				</p> -->
 			</div>
 			<div class="section contact">
 				<h4>Contact Us</h4>
@@ -160,7 +160,7 @@
 					<span>Phone:</span> (+20) 000 222 999
 				</p>
 				<p>
-					<span>Email:</span> info@address.com
+					<span>Email:</span> info@fefa.com.tr
 				</p>
 			</div>
 			<div class="section">

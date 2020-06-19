@@ -263,7 +263,6 @@ word-wrap:normal;
 }
 /** logo **/
 .logo {
-	float: left;
 	display: inline-block;
 }
 /** navigation **/
