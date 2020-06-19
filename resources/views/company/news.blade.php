@@ -7,8 +7,6 @@
 	<link rel="stylesheet" href="../css/style.css" type="text/css">
 	<link rel="icon" href="../images/logof22.png">
 	<script src="../js/script.js"></script>
-
-	<link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
 	<div id="header">
@@ -52,14 +50,14 @@
 				<div style="display: flex;">
 					<ul class="left_nav" style="float:left; margin:10px 9px 0 0;width:200px;">
 						
-						<a href="company.html"><li class="menu-btn">About Us<span class="expand">&#x203A;</span></li></a> 
+						<a href="company/company.html"><li class="menu-btn">About Us<span class="expand">&#x203A;</span></li></a> 
 						
 						
 						  <a href="/news">
 							<li class="menu-btn">News & Events<span class="expand">&#x203A;</span></li>
 						</a> 
 						
-						  <a href="careers.html">
+						  <a href="company/careers.html">
 							<li class="menu-btn" >Careers<span class="expand">&#x203A;</span></li>
 							</a>
 						
