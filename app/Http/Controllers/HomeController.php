@@ -48,6 +48,29 @@ class HomeController extends Controller
         ]);
     }
 
+    public function news()
+    {
+        $messages = indexpage::paginate(5);
+        return view('company/news', [
+            'news'=>$messages
+        ]);
+    }
+
+    public function latestNews()
+    {
+        $messages = indexpage::limit(3)->get();
+        return view('index', [
+            'news'=>$messages
+        ]);
+    }
+
+    public function newsdetail($id)
+    {
+        $message = indexpage::find($id);
+        return view('company/singlepost', [
+            'news'=>$message
+        ]);
+    }
     public function consultantIndex()
     {
         $messages = consultants::paginate(5);

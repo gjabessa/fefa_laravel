@@ -529,7 +529,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e4efc0', end
 	
 }
 .whitebg1 b{
-	color: #005aab;"
+	color: #005aab;
 }
 .whitebg1{
 	background: white;
@@ -812,6 +812,8 @@ ul li{
 }
 .content-right p{
 	font-size: 12px;
+	max-height: 70px;
+	overflow: hidden;
 }
 .featured {
 	padding: 30px 0;
@@ -1015,6 +1017,8 @@ ul li{
 }
 .news > li > .news_headline {
 	margin: 0px;
+	height: 120px;
+	overflow: hidden;
 }
 .news > li .box {
 	float: left;

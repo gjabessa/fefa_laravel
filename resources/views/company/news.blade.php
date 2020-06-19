@@ -24,7 +24,7 @@
 		<div class="clearfix">
 			
 			<div class="menubar">
-				<a href="../index.html"><img src="../images/logof22.png" class="logo" height="100px;"></a>
+				<a href="../"><img src="../images/logof22.png" class="logo" height="100px;"></a>
 				<div class="menus">
 					<div id="menu"><a href="../contact.html">Contact</a></div>
 					<div id="menu"><a href="../company.html">Company & Careers </a></div>
@@ -43,7 +43,7 @@
 				<div class="expertisetop">
 					<div id="expertise-content"> <div class="breadcrumb">Home / Products & Services / Solar</div> </div>
 					<div id="expertise-content3" style="width: 100%;height: 100px;">
-						<div class="center-title"><h2>News & Events</h2></div>
+						<div class="center-title"><h2 style="max-width: 240px;">News & Events</h2></div>
 					</div>
 				</div>
 	
@@ -53,7 +53,7 @@
 						<a href="company.html"><li class="menu-btn">About Us<span class="expand">&#x203A;</span></li></a> 
 						
 						
-						  <a href="news.html">
+						  <a href="/news">
 							<li class="menu-btn">News & Events<span class="expand">&#x203A;</span></li>
 						</a> 
 						
@@ -62,23 +62,27 @@
 							</a>
 						
 						</ul>
-					<div class="whitebg" >
+					<div class="whitebg1" >
 							<h1>News</h1>
-							<div class="images">
-								<img src="../images/flexible.jpg" alt="Img" height="237" width="205">
-							</div>
-							<div class="details">
-								<p class="info">
-									31st January 2023 by <span class="author">Manes Winchester</span>
-								</p>
-								<h2>News Single Post</h2>
-								<p>
-									This website template has been designed by Free Website Templates for you, for free. You can replace all this text with your own text. You can remove any link to our website from this website template, you're free to use this website template without linking back to us. If you're having problems editing this website template, then don't hesitate to ask for help on the Forums.
-								</p>
-								<p>
-									This website template has been designed by Free Website Templates for you, for free. You can replace all this text with your own text. You can remove any link to our website from this website template, you're free to use this website template without linking back to us.
-								</p>
-							</div>
+							<ul class="news">
+							@foreach($news as $message)
+								<li>
+									<div class="box">
+										<img src="storage/{{$message ->image}}" alt="Img" height="245" width="213">
+									</div>
+									<p class="info">
+									{{$message->created_at}} by <span class="author">{{$message->posted_by}}</span>
+									</p>
+									<h2>{{$message->title}}</h2>
+									<p class="news_headline">
+									{{$message->description}}
+									</p>
+									<a href="/newsdetail/{{$message->id}}" class="more">Read More</a>
+								</li>
+							@endforeach
+                    
+							</ul>
+							{{$news->render()}}
 					</div>
 					<div>
 						<div class="right-custom-card">

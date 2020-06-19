@@ -24,7 +24,7 @@
 		<div class="clearfix">
 			
 			<div class="menubar">
-				<a href="../index.html"><img src="../images/logof22.png" class="logo" height="100px;"></a>
+				<a href="../"><img src="../images/logof22.png" class="logo" height="100px;"></a>
 				<div class="menus">
 					<div id="menu"><a href="../contact.html">Contact</a></div>
 					<div id="menu"><a href="../company.html">Company & Careers </a></div>
@@ -43,7 +43,7 @@
 				<div class="expertisetop">
 					<div id="expertise-content"> <div class="breadcrumb">Home / Products & Services / Solar</div> </div>
 					<div id="expertise-content3" style="width: 100%;height: 100px;">
-						<div class="center-title"><h2 style="max-width: 240px;">News & Events</h2></div>
+						<div class="center-title"><h2>News & Events</h2></div>
 					</div>
 				</div>
 	
@@ -53,7 +53,7 @@
 						<a href="company.html"><li class="menu-btn">About Us<span class="expand">&#x203A;</span></li></a> 
 						
 						
-						  <a href="news.html">
+						  <a href="/news">
 							<li class="menu-btn">News & Events<span class="expand">&#x203A;</span></li>
 						</a> 
 						
@@ -62,49 +62,21 @@
 							</a>
 						
 						</ul>
-					<div class="whitebg1" >
+					<div class="whitebg" >
 							<h1>News</h1>
-							<ul class="news">
-								<li>
-									<div class="box">
-										<img src="../images/news.jpg" alt="Img" height="245" width="213">
-									</div>
-									<p class="info">
-										31st January 2023 by <span class="author">Manes Winchester</span>
-									</p>
-									<h2>The Basics of Marriage Laws</h2>
-									<p class="news_headline">
-										This website template has been designed by Free Website Templates for you, for free. You can replace all this text with your own text.You can remove any link
-									</p>
-									<a href="singlepost.html" class="more">Read More</a>
-								</li>
-								<li>
-									<div class="box">
-										<img src="../images/happy.jpg" alt="Img" height="245" width="213">
-									</div>
-									<p class="info">
-										31st January 2023 by <span class="author">Manes Winchester</span>
-									</p>
-									<h2>Happy Newly Divorced Women</h2>
-									<p class="news_headline">
-										This website template has been designed by Free Website Templates for you, for free. You can replace all this text with your own text.You can remove any link
-									</p>
-									<a href="singlepost.html" class="more">Read More</a>
-								</li>
-								<li>
-									<div class="box">
-										<img src="images/children.jpg" alt="Img" height="245" width="213">
-									</div>
-									<p class="info">
-										31st January 2023 by <span class="author">Manes Winchester</span>
-									</p>
-									<h2>Children &amp; Divorced Parents</h2>
-									<p class="news_headline">
-										This website template has been designed by Free Website Templates for you, for free. You can replace all this text with your own text.You can remove any link
-									</p>
-									<a href="singlepost.html" class="more">Read More</a>
-								</li>
-							</ul>
+							<div class="images">
+								<img src="../storage/{{$news -> image}}" alt="Img" height="237" width="205">
+							</div>
+							<div class="details">
+								<p class="info">
+									{{$news -> created_at}} by <span class="author">{{$news -> posted_by}}</span>
+								</p>
+								<h2>{{$news -> title}}</h2>
+								<p>
+								{{$news -> description}}
+								</p>
+								
+							</div>
 					</div>
 					<div>
 						<div class="right-custom-card">

@@ -12,10 +12,15 @@
 */
 use App\indexpage;
 
-Route::get('/', function () {
-    return view('index');
+Route::get('/','HomeController@latestNews')->name('home');
 
+Route::get('/news','HomeController@news')->name('News');
+
+Route::get('/new', function () {
+    return view('company/news');
 });
+
+Route::get('/newsdetail/{id}','HomeController@newsdetail');
 
 Auth::routes();
 
