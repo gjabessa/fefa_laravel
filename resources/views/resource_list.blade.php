@@ -49,17 +49,17 @@
 				<div style="display: flex;">
 					<ul class="left_nav" style="float:left; margin:10px 9px 0 0;width:200px;">
 						
-						<a href="resource_list.html"><li class="menu-btn">UPS<span class="expand">&#x203A;</span></li></a>
+						<a href="ups"><li class="menu-btn">UPS<span class="expand">&#x203A;</span></li></a>
 					
-						<a href="resource_list.html"><li class="menu-btn" >Data Center<span class="expand">&#x203A;</span></li></a>
-						  <a href="resource_list.html">
+						<a href="datacenter"><li class="menu-btn" >Data Center<span class="expand">&#x203A;</span></li></a>
+						  <a href="solar">
 							<li class="menu-btn">Solar Power<span class="expand">&#x203A;</span></li>
 							</a>
 						
-							<a href="resource_list.html">
+							<a href="special">
 								<li class="menu-btn">Special Solutions<span class="expand">&#x203A;</span></li>
 								</a>
-							<a href="resource_list.html">
+							<a href="battery">
 							  <li class="menu-btn" >Batteries<span class="expand">&#x203A;</span></li>
 							 </a>
 						</ul>
