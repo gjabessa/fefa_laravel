@@ -41,7 +41,7 @@
 		
 			<div class="clearfix">
 				<div class="expertisetop">
-					<div id="expertise-content"> <div class="breadcrumb">Home / Products & Services / Solar</div> </div>
+					<div id="expertise-content"> <div class="breadcrumb"> <a href="/"> Home</a> / <a href="/company.html">  Company & Careers</a> / News Detail</div> </div>
 					<div id="expertise-content3" style="width: 100%;height: 100px;">
 						<div class="center-title"><h2>News & Events</h2></div>
 					</div>
