@@ -24,9 +24,10 @@
                         <b>Category</b>: <br>
                         <select name="category">
                             <option value="ups">UPS</option>
-                            <option value="solar panel">Solar Panels</option>
-                            <option value="battery">Battery</option>
+                            <option value="solar">Solar Panels</option>
+                            <option value="datacenter">Data Center</option>
                             <option value="special">Special Solutions</option>
+                            <option value="battery">Battery</option>
                         </select>
                         <br>
                         {{ csrf_field() }}
