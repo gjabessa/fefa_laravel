@@ -69,7 +69,7 @@
 							<li><a href="/datacenter/datacenter.html"> Data Centers </a></li>
 							<li><a href="/solar/solar.html"> Solar Panels </a></li>
 							<li><a href="expertise.html"> Our Expertise</a></li>
-							<li><a href="consultancy.html"> Consultancy </a></li>
+							<li><a href="consultancy"> Consultancy </a></li>
 							<li><a href="contact.html">Contact </a></li>
 						</ul>
 					</div>
@@ -130,7 +130,7 @@
 									<b>Consulting</b> <br>
 										 We give expert advise and consultancy. Through a network of reputed consultancy firms all over the world, our client can get the optimum solution for their power supply applications.
 									<br>
-									<a href="consultancy.html" class="more">Read More</a>
+									<a href="consultancy" class="more">Read More</a>
 								</p>
 								
 							</td>

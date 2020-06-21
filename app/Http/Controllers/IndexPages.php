@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\indexpage;
 use App\resources;
+use App\consultants;
 
 use Illuminate\Http\Request;
 
@@ -33,6 +34,13 @@ class indexPages extends Controller
         $messages = indexpage::paginate(5);
         return view('company/news', [
             'news'=>$messages
+        ]);
+    }
+
+    public function consultants(Request $request){
+        $consultants = consultants::where('country',$request->country)->paginate(5);
+        return view('consultants',[
+            'consultants'=>$consultants
         ]);
     }
 

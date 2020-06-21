@@ -20,6 +20,12 @@ Route::get('/new', function () {
     return view('company/news');
 });
 
+Route::get('/consultancy',function(){
+    return view('consultancy');
+});
+
+Route::post('/getConsultants','IndexPages@consultants');
+
 Route::get('/newsdetail/{id}','IndexPages@newsdetail');
 
 Route::get('/resource_list/{category}','IndexPages@resourcelist');

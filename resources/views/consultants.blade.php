@@ -47,6 +47,7 @@
 				</div>
 				<div style="display: flex;">
 				<div class="whitebg">
+					<form action="/getConsultants" method="post">
 					Select Country: <select id="country" name="country">
 						<option value="Afganistan">Afghanistan</option>
 						<option value="Albania">Albania</option>
@@ -294,12 +295,46 @@
 						<option value="Zambia">Zambia</option>
 						<option value="Zimbabwe">Zimbabwe</option>
 					 </select>
-					 <button class="more">Search</button>
+					 {{ csrf_field() }}
+					 	<button type="submit" class="more">Search</button>
+					</form>
+					 
+					 
 					 <ul style="list-style-type:none">
-						<a href="consultancy2.html"><li class="menu-btn"> Some Custultancy Firm <span class="expand"> &#9662; </span></li></a> 
-						<a href="#"><li class="menu-btn"> Some Custultancy Firm <span class="expand"> &#9662; </span></li></a> 
-						<a href="#"><li class="menu-btn"> Some Custultancy Firm <span class="expand"> &#9662; </span></li></a> 
+					 	@foreach($consultants as $message)
+							<a href="consultancy2.html"><li class="menu-btn"> {{$message -> name}} </li></a> 
+							<div style="padding:20px 0 15px 30px;display: flex;">
+								<ul class="contact" style="list-style: none;padding:0 5px;">
+									<li>
+										<p>
+											
+											<em>{{$message->name}}</em> <br>{{$message -> address}}
+										</p>
+									</li>
+									<li>
+										<p>Phone: {{$message->phone_no}}
+										</p>
+											
+											
+									</li>
+									<li>
+											<p>Fax: {{$message->fax}}</p>
+							
+									</li>
+									<li>
+										<p class="mail">
+											Email: {{$message->email}}
+										</p>
+									</li>
+								</ul>
+							</div>
+						@endforeach
+						@if (count($consultants) == 0)
+								<p>No registered consultants in that country</p>
+						@endif
+						{{$consultants->render()}}
 					 </ul>
+					
 				</div>
 
 				<div>

@@ -47,6 +47,7 @@
 				</div>
 				<div style="display: flex;">
 				<div class="whitebg">
+					<form action="/getConsultants" method="post">
 					Select Country: <select id="country" name="country">
 						<option value="Afganistan">Afghanistan</option>
 						<option value="Albania">Albania</option>
@@ -294,37 +295,11 @@
 						<option value="Zambia">Zambia</option>
 						<option value="Zimbabwe">Zimbabwe</option>
 					 </select>
-					 <button class="more">Search</button>
-					 <ul style="list-style-type:none">
-						<a href="#"><li class="menu-btn"> Some Custultancy Firm <span class="expand"> &#9662; </span></li></a> 
-						<div style="padding:30px;display: flex;">
-							<ul class="contact" style="list-style: none;padding:0 10px;">
-								<li>
-									<p>
-										
-										 <em>FEFA Power Solutions</em> <br>Ata SB. Mah. Sümbül Cad, No:2/6 Pk:16600 Gemlik/Bursa
-									</p>
-								</li>
-								<li>
-									<p>Phone: (+20) 000 222 999
-									</p>
-										
-										
-								</li>
-								<li>
-										<p>Fax: (+20) 000 222 988</p>
-						
-								</li>
-								<li>
-									<p class="mail">
-										Email: info@fefa.com.tr
-									</p>
-								</li>
-							</ul>
-						</div>
-						<a href="#"><li class="menu-btn"> Some Custultancy Firm <span class="expand"> &#9662; </span></li></a> 
-						<a href="#"><li class="menu-btn"> Some Custultancy Firm <span class="expand"> &#9662; </span></li></a> 
-					 </ul>
+					 {{ csrf_field() }}
+					 <button type="submit" class="more">Search</button>
+					</form>
+					 
+					
 				</div>
 
 				<div>

@@ -292,7 +292,7 @@
                         <li>{{$message->address}}</li>
 
                         <li>{{$message->email}}</li>
-                        <li>{{$message->phone_nophp}}</li>
+                        <li>{{$message->phone_no}}</li>
                         <li>{{$message->fax}}</li>
                         <li>{{$message->country}}</li>
                         <br>
